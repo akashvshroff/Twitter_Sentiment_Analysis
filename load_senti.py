@@ -1,14 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr  2 13:26:53 2020
-
-@author: akush
-"""
-
 import sqlite3
 import tweepy
 from textblob import TextBlob
-from config import *
+from config import * #twitter api keys
 import matplotlib.pyplot as plt
 
 def load():
@@ -54,21 +47,18 @@ def analyse():
     p = pcount/total * 100
     n = ncount/total * 100
     ne = necount/total * 100
-    #print (p,n,ne)
 
-    positive = float("{:.2f}".format(p))
+    positive = float("{:.2f}".format(p)) #formating for number of decimal places
     negative = float("{:.2f}".format(n))
     neutral = float("{:.2f}".format(ne))
-    #g = float("{:.2f}".format(x))
-    # print (positive,negative,neutral)
-    show(positive,neutral,negative)
-    conn.commit()
 
-def show(p,ne,n):
+    conn.commit()
+    show (positive, neutral, negative)
+
+def show(positive, neutral, negative):
 
     labels = 'Positive','Neutral','Negative'
-    sizes = [p,ne,n]
-    #print (sizes)
+    sizes = [positive, neutral, negative]
     explode = (0,0,0.1)
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
