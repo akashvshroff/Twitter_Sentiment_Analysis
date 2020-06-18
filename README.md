@@ -1,5 +1,5 @@
 # Outline
-  * Any key string is inputted by the user and the top 250 tweets relating to the key string are queried using tweepy and the Twitter API, following which a sentiment analysis is conducted on the text of the tweets fetched using TextBlob (v0.16.0). The results are displayed as a pie chart. More detailed description below.
+  * Any key string is inputted by the user and the top 250 tweets relating to the key string are queried using tweepy and the Twitter API, following which a sentiment analysis is conducted on the text of the tweets fetched using TextBlob (v0.16.0). The results are then displayed as a pie chart. A more detailed description lies below.
 
 # Purpose
   * The code for this project is very rough around the edges as it was one of my first undertakings in my attempt to teach myself programming and it was extremely useful in understanding the fundamentals of SQL and relational databases as well as in solidifying my knowledge of APIs and Python. Moreover, it helped me understand how to visualise data and its significance. This program could be used by any company or individual to gauge the sentimental response of the general public to their product or marketing.
